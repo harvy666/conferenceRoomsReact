@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="rooms.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+    <h2>Select date:</h2>
+    <input id="datepicker" type="text" placeholder="Select date">  
+    <button id=showDaysButton type="button" onclick="showDays()" >Show reserved days</button>
+     <div id="datesContainer"></div>
+
+   
+    <div>
+        <form id="roomsForm" action="/rooms" method="POST">
+            <div id="rooms" style="display: none;">
+                <h1>Rooms</h1>
+                <img class="rectangle" id="rectangle1" src="images/green1.png" alt="Green Rectangle 1" width="200" height="auto" onclick="changeImage('rectangle1','room1Cb')"> 
+                <img class="rectangle" id="rectangle2" src="images/green2.png" alt="Green Rectangle 2" width="200" height="auto" onclick="changeImage('rectangle2','room2Cb')"> <br>  
+                <img class="rectangle" id="rectangle3" src="images/green3.png" alt="Green Rectangle 3" width="200" height="auto" onclick="changeImage('rectangle3','room3Cb')">  
+                <img class="rectangle" id="rectangle4" src="images/green4.png" alt="Green Rectangle 4" width="200" height="auto" onclick="changeImage('rectangle4','room4Cb')"> <br>
+                <button type="submit">SUBMIT</button>
+            </div>
+            <div id="checkbox" style="display: none;">
+                <input type="checkbox" id="room1Cb" name="room1Cb">
+                <label for="room1Cb"> Room 1</label><br>
+                <input type="checkbox" id="room2Cb" name="room2Cb">
+                <label for="room2Cb">Room 2</label><br>
+                <input type="checkbox" id="room3Cb" name="room3Cb">
+                <label for="room3Cb"> Room 3</label><br>
+                <input type="checkbox" id="room4Cb" name="room4Cb">
+                <label for="room4Cb">Room 4</label><br>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
