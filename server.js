@@ -1,4 +1,4 @@
-//TODO start doing some react stuff
+//TODO somehow need to build/reference in a better way my App.js (or index.js?) its still uses rooms.pug I think
 
 const moment = require('moment-timezone');
 const express = require("express");
